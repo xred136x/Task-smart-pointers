@@ -13,7 +13,9 @@ void Engine::Printer::addVec(std::shared_ptr<IVehicle>& v)
 
 void Engine::Printer::Print()
 {
-	for (auto el : _vec)
-		std::cout << el->getSpeed() << ' ';
+	for (auto el : _vec) {
+		el->PrintType();
+		std::cout << el->getSpeed() << '\n';
+	}
 }
 
